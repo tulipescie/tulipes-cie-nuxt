@@ -1,0 +1,6 @@
+export {default as HomeAgence} from './HomeAgence.vue'
+export {default as HomeBulbe} from './HomeBulbe.vue'
+export {default as HomeClients} from './HomeClients.vue'
+export {default as HomeContact} from './HomeContact.vue'
+export {default as HomeHeader} from './HomeHeader.vue'
+export {default as HomeRealisations} from './HomeRealisations.vue'
