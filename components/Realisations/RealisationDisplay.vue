@@ -2,7 +2,6 @@
   <div id="realisations-container">
     <div class="projet" v-for="(projet, index) in datas" :key="'projet-' + index">
       <nuxt-link :to="`/realisations/${projet.uid}`">
-      <!-- {{ projet.data.projet_title }} -->
         {{ asText(projet.data.projet_title) }}
         <br>
         {{ asText(projet.data.projet_subtitle) }}
@@ -16,8 +15,6 @@
 </template>
 
 <script>
-import PrismicDOM from "prismic-dom"
-import htmlSerializer from "prismic-javascript"
 import Player from '@vimeo/player';
 
 export default {
@@ -25,18 +22,19 @@ export default {
   props: ['datas'],
   methods: {
     playVideoOnMouseOver (e) {
-      // on récupère la vidéo cible
       var iframe = e.target;
-      // on la passe dans l'API Viméo
       var player = new Player(iframe);
-      player.play();
-      
+      var playPromise = player.play();
+      if (playPromise !== undefined) {
+      playPromise.then(_ => {
+      })
+      .catch(error => {
+      });
+    }
       // checker mettre une durée à la vidéo
     },
     stopVideoOnMouseleave (e) {
-      // on récupère la vidéo cible
       var iframe = e.target;
-      // on la passe dans l'API Viméo
       var player = new Player(iframe);
       player.pause();
     }

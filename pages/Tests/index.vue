@@ -1,16 +1,18 @@
 <template>
   <section class="container">
-    
-    <horizontal-scroll />
+    <aframe />
+    <!-- <horizontal-scroll /> -->
   </section>
 </template>
 
 <script>
 import HorizontalScroll from './HorizontalScroll.vue'
+import Aframe from './Aframe.vue'
 
 export default {
   components: {
-    HorizontalScroll
+    HorizontalScroll,
+    Aframe
   }
 }
 </script>

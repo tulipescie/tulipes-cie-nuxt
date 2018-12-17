@@ -11,6 +11,9 @@ import Navigation from '~/components/Navigation.vue'
 export default {
   components: {
     Navigation
+	},
+	async asyncData(context) {
+    var apiEndpoint = "https://tulipes-cie.prismic.io/api/v2";
   }
 }
 </script>
@@ -73,6 +76,5 @@ table {
 }
 a { 
 	text-decoration: none;
-	color: red;
 }
 </style>

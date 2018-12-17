@@ -33,7 +33,4 @@ nav
       display: inline-block
       list-style-type: none
 
-  p 
-    color: $tulipes-pink
-
 </style>
