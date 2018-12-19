@@ -34,6 +34,16 @@ export default {
     HomeClients,
     HomeContact
   },
+  head () {
+    return {
+      title: 'Tulipes et Compagnie',
+      meta: [
+        { hid: 'description', 
+        name: 'description', 
+        content: 'Bienvenue chez Tulipes et Compagnie' }
+      ]
+    }
+  },
   async asyncData(context) {
     const api = await Prismic.getApi('https://tulipes-cie.prismic.io/api/v2')
     let homepageDatas = {}
