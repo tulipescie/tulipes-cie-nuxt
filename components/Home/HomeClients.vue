@@ -25,18 +25,21 @@ export default {
 }
 </script>
 
-<style lang="sass" scoped>
+<style lang="stylus" scoped>
 section 
-  background: $tulipes-black
-  width: 100%
-  height: 50vh
+  background $tulipes-black
+  width 100%
+  height 50vh
+
   ul    
-    display: flex
+    display flex
+
     li 
-      max-width: 10%
+      max-width 10%
+      
       img
-        width: 100%
-        height: auto
+        width 100%
+        height auto
 
 
 </style>

@@ -17,19 +17,13 @@ export default {
 }
 </script>
 
-<style lang="sass" scoped>
+<style lang="stylus" scoped>
 header 
-  width: 100%
-  height: 70vh
-  display: flex
-  text-align: center
-  align-items: center
-  justify-content: center
-  flex-direction: column 
-  div
-    /deep/ h1 
-    font-size: 30px
-  #scroll 
-    margin-top: 10vh
-
+  width 100%
+  height 70vh
+  display flex
+  text-align center
+  align-items center
+  justify-content center
+  flex-direction column 
 </style>

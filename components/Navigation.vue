@@ -2,7 +2,7 @@
   <nav>
     <div>
       <nuxt-link to="/">
-        <img src="~/assets/img/logo.png">
+        <img src="/img/logo.png">
       </nuxt-link>
     </div>
     <ul>
@@ -15,22 +15,22 @@
   </nav>
 </template>
 
-<style lang="sass" scoped>
+<style lang="stylus" scoped>
 nav 
-  height: 10vh
-  width: 100%
-  display: flex
-  flex-direction: row
-  align-items: center
-  justify-content: space-between
+  height 10vh
+  width 100%
+  display flex
+  flex-direction row
+  align-items center
+  justify-content space-between
   div 
-    height: 100%
+    height 100%
     img 
-      height: 100%
-      width: auto
+      height 100%
+      width auto
   ul 
     li 
-      display: inline-block
-      list-style-type: none
+      display inline-block
+      list-style-type none
 
 </style>

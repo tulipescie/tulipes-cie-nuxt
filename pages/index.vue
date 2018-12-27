@@ -64,9 +64,7 @@ export default {
 }
 </script>
 
-<style lang="scss">
-// rajouter div container
-h2 {
-  color: $tulipes-blue;
-}
+<style lang="stylus">
+h2 
+  color tulipes_blue
 </style>

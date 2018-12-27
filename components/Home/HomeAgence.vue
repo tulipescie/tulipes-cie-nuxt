@@ -19,7 +19,7 @@
     </div>
     <div class="side">
       <div id="right-container">
-        <img src="~/assets/img/agence.jpg" alt="">
+        <img src="/img/agence.jpg" alt="">
       </div>
     </div>
   </section>
@@ -36,34 +36,34 @@ export default {
 }
 </script>
 
-<style lang="sass" scoped>
+<style lang="stylus" scoped>
 section 
-  width: 100%
-  height: 50vh
-  display: flex
-  text-align: center
-  align-items: center
-  justify-content: center
-  flex-direction: row 
+  width 100%
+  height 50vh
+  display flex
+  text-align center
+  align-items center
+  justify-content center
+  flex-direction row 
   .side 
-    text-align: left
-    height: 100%
-    width: 50%
-    padding: 0 2%
+    text-align left
+    height 100%
+    width 50%
+    padding 0 2%
     h2 
-      font-size: 30px
-      margin-bottom: 10px
+      font-size 30px
+      margin-bottom 10px
     button 
-      margin-top: 10px
+      margin-top 10px
     div
-      height: 100%
-      width: 100%
+      height 100%
+      width 100%
     #right-container
-      text-align: center
+      text-align center
       img 
-        margin: 0 auto
-        height: 100%
-        width: auto
+        margin 0 auto
+        height 100%
+        width auto
 
   
 </style>

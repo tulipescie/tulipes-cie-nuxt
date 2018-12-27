@@ -56,7 +56,5 @@ export default {
 }
 </script>
 
-<style lang="sass" scoped>
-a
-  color: red !important
+<style lang="stylus" scoped>
 </style>

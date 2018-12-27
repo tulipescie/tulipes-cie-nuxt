@@ -1,71 +1,52 @@
 import Vuex from 'vuex'
-import Prismic from "prismic-javascript"
+import axios from 'axios'
 
 const createStore = () => {
   return new Vuex.Store({
     state: {
-      datas: {}
+      content: {},
+      posts: {}
     },
     mutations: {
-      SET_HOMEPAGE: (state, datas) => {
-        state.datas.homepage = datas
+      setPage: (state, content) => {
+        state.content = content
       },
-      SET_DATASET: (state, datas) => {
-        state.datas.all = datas
+      setPosts: (state, posts) => {
+        state.posts = posts
       },
-      SET_CLIENTS: (state, datas) => {
-        state.datas.clients = datas
-      },
-      SET_REALISATIONS: (state, datas) => {
-        state.datas.realisations = datas
+      setCurrentPost: (state, post) => {
+        state.post = post
       }
     },
     actions: {
-      // Prismic
-      async PRISMIC_CALL({
+      async getPosts({
         commit
       }) {
-        function queryAll(api) {
-          api.query("")
-            .then(response => {
-              let querydatas = response.results
-              commit('SET_DATASET', querydatas)
-            })
-          api.getSingle('homepage')
-            .then(document => {
-              let homepagedatas = document.data
-              commit('SET_HOMEPAGE', homepagedatas)
-            })
-          api.getSingle('liste_clients')
-            .then(document => {
-              let listclients = document.data.clients_list
-              commit('SET_CLIENTS', listclients)
-            })
-          api.query(Prismic.Predicates.at('document.type', 'projet'), {
-              orderings: '[my.projet.date desc]'
-            })
-            .then(response => {
-              let realisations = response.results
-              commit('SET_REALISATIONS', realisations)
-            })
-        }
-
-        function initApi() {
-          let api = Prismic.getApi("https://tulipes-cie.prismic.io/api/v2")
-          return api
-        }
-        await initApi().then(function (api) {
-          queryAll(api)
-        }).catch(err => console.log(err))
+        let ref = await axios.get('https://tulipes-cie.prismic.io/api/v2')
+        ref = ref.refs[0].ref
+        const data = await axios.get(
+          'https://tulipes-cie.prismic.io/api/v2/documents/search?ref=' + ref + '&q=[[at(document.type,"homepage")]]'
+        )
+        commit('setPosts', data)
       },
-
-      //Nuxt Server Init
-    //   async nuxtServerInit({
-    //     commit,
-    //     dispatch
-    //   }) {
-    //     await dispatch('PRISMIC_CALL');
-    //   }
+      async getPost({
+        commit,
+        store
+      }, id) {
+        let { data } = await axios.get(`posts/${id}`)
+        commit('setCurrentPost', data)
+      },
+      async nuxtServerInit({
+        commit
+      }) {
+        let ref = await this.$axios.$get('https://tulipes-cie.prismic.io/api/v2')
+        ref = ref.refs[0].ref
+        const data = await this.$axios.$get(
+          'https://tulipes-cie.prismic.io/api/v2/documents/search?ref=' + ref
+          // 'https://tulipes-cie.prismic.io/api/v2/documents/search?ref=' + ref + '&q=[[at(document.type,"homepage")]]'
+        )
+        commit('setPage', data)
+      }
     }
   })
 }

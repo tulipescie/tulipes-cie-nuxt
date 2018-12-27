@@ -91,45 +91,44 @@ export default {
 }
 </script>
 
-<style lang="scss">
-// rajouter div container
-#video-wrapper {
-  position: relative;
-  padding-bottom: 56.25%; /* 16:9 */
-  padding-top: 25px;
-  height: 0;
+<style lang="stylus" scoped>
+#video-wrapper 
+  position relative
+  padding-bottom 56.25% /* 169 */
+  padding-top 25px
+  height 0
   object,
   embed,
-  iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-  }
-}
-header {
-  #title {
-    text-align: center;
-    h1 {
-      font-size: 50px;
-    }
-    h2 {
-      font-size: 25px;
-      text-transform: uppercase;
-    }
-  }
-  ul {
-    margin-top: 10px;
-    display: flex;
-    li {
-      width: 30%;
-    }
-  }
-}
-div {
-  img {
-    max-width: 500px;
-  }
-}
+  iframe 
+    position absolute
+    top 0
+    left 0
+    width 100%
+    height 100%
+  
+
+header 
+  #title 
+    text-align center
+    h1 
+      font-size 50px
+    
+    h2 
+      font-size 25px
+      text-transform uppercase
+    
+  
+  ul 
+    margin-top 10px
+    display flex
+    li 
+      width 30%
+    
+  
+
+div 
+  img 
+    max-width 500px
+  
+
 </style>

@@ -31,21 +31,21 @@ export default {
 }
 </script>
 
-<style lang="sass" scoped>
+<style lang="stylus" scoped>
 #realisations-container 
-  width: 100%
-  height: 70vh
-  margin: 0 auto
-  display: flex
-  flex-wrap: wrap
-  text-align: center
-  align-items: left
-  justify-content: left
-  flex-direction: row 
+  width 100%
+  height 70vh
+  margin 0 auto
+  display flex
+  flex-wrap wrap
+  text-align center
+  align-items left
+  justify-content left
+  flex-direction row 
   .projet
-    max-width: 32%
+    max-width 32%
     iframe 
-      width: 100%
+      width 100%
     
 
 </style>

@@ -25,8 +25,8 @@ export default {
 }
 </script>
 
-<style lang="sass" scoped>
-#blog-posts-container 
-  border: 2px solid red
-  width: 30%
+<style lang="stylus" scoped>
+// #blog-posts-container 
+//   border: 2px solid red
+//   width: 30%
 </style>
