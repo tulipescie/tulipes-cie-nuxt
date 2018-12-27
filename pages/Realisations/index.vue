@@ -11,7 +11,7 @@
     </header>
 
     <div>
-      <realisation-display :datas="displayProjects"/>
+      <realisation-preview :datas="displayProjects"/>
     </div>
   </section>
 </template>
@@ -23,11 +23,11 @@ import PrismicDOM from 'prismic-dom'
 import htmlSerializer from 'prismic-javascript'
 
 // components
-import RealisationDisplay from '~/components/Realisations/RealisationDisplay.vue'
+import RealisationPreview from '~/components/Realisations/RealisationPreview.vue'
 
 export default {
   name: 'Realisations',
-  components: { RealisationDisplay },
+  components: { RealisationPreview },
   async asyncData(context) {
     var apiEndpoint = 'https://tulipes-cie.prismic.io/api/v2'
     const api = await Prismic.getApi(apiEndpoint)

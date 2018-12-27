@@ -11,10 +11,7 @@ import Navigation from '~/components/Navigation.vue'
 export default {
   components: {
     Navigation
-	},
-	async asyncData(context) {
-    var apiEndpoint = "https://tulipes-cie.prismic.io/api/v2";
-  }
+	}
 }
 </script>
 
@@ -48,7 +45,7 @@ time, mark, audio, video {
 	padding: 0;
 	border: 0;
 	font-size: 100%;
-	font: inherit;
+	/* font: inherit; */
 	vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
