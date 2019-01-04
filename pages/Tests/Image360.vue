@@ -1,10 +1,10 @@
 <template>
   <div>
     <ul>
-      <li v-on:click="changeImage('img/360/360_1.jpg')">Image 1</li>
-      <li v-on:click="changeImage('img/360/360_2.jpg')">Image 2</li>
-      <li v-on:click="changeImage('img/360/360_3.jpg')">Image 3</li>
-      <li v-on:click="changeImage('img/360/360_4.jpg')">Image 4</li>
+      <li v-on:click="changeImage('img/360/tulipes1.png')">Image 1</li>
+      <li v-on:click="changeImage('img/360/tulipes2.png')">Image 2</li>
+      <li v-on:click="changeImage('img/360/tulipes3.png')">Image 3</li>
+      <li v-on:click="changeImage('img/360/tulipes4.png')">Image 4</li>
       <li v-on:click="changeImage('img/360/360_5.jpg')">Image 5</li>
     </ul>
     <div id="vrview"></div>
@@ -18,7 +18,7 @@ export default {
   name: 'VR',
   data () {
     return {
-      pathimg: 'img/360/360.jpg'
+      pathimg: 'img/360/tulipes1.png'
     }
   },
   mounted() {

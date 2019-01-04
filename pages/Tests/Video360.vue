@@ -1,6 +1,7 @@
 <template>
   <div>
     <div id="vrview"></div>
+    <iframe src="https://player.vimeo.com/video/232449909" width="640" height="274" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
   </div>
 </template>
 
@@ -10,9 +11,9 @@ import THREE from '~/plugins/three.js'
 export default {
   name: 'VR',
   mounted() {
-    this.createScene()
-    this.onResize()
-    this.addListeners()
+    // this.createScene()
+    // this.onResize()
+    // this.addListeners()
   },
   methods: {
     addListeners() {

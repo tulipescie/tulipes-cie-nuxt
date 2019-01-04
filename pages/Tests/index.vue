@@ -1,10 +1,10 @@
 <template>
   <section class="container">
     <!-- <image360 /> -->
-    <video360 />
+    <!-- <video360 /> -->
     <!-- <aframe /> -->
     <!-- <horizontal-scroll /> -->
-    <!-- <lazy /> -->
+    <lazy />
   </section>
 </template>
 
